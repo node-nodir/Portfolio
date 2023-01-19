@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Modal from "../Modal/Modal";
 import { AiOutlineUnorderedList } from "react-icons/ai";
 import { TbDownload } from "react-icons/tb";
@@ -21,6 +21,13 @@ function Header() {
     },
     []
   );
+
+  // ------> Check Scroll
+  if (showModal) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "scroll";
+  }
 
   return (
     <header

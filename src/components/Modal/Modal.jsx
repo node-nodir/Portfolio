@@ -5,7 +5,7 @@ import { TfiGallery } from "react-icons/tfi";
 import { AiOutlineHome } from "react-icons/ai";
 import { MdWorkOutline } from "react-icons/md";
 import { TbBrandTelegram } from "react-icons/tb";
-import { VscChromeClose } from "react-icons/vsc";
+import { SlClose } from "react-icons/sl";
 
 // ------> Pdf
 import Resume from "../../Assets/pdf/resume.pdf";
@@ -30,15 +30,15 @@ function Modal({ showModal, setShowModal }) {
     >
       <div
         className={`${
-          showModal ? "top-[55%]" : " -bottom-[900px]"
+          showModal ? "top-[60%]" : " -bottom-[900px]"
         } w-full absolute h-full duration-300 bg-white rounded-t-xl px-4 z-50`}
       >
-        <div className="flex items-center justify-end">
-          <button className="">
-            <VscChromeClose />
+        <div className="flex items-center justify-end pt-4 pb-6">
+          <button onClick={() => setShowModal(false)}>
+            <SlClose className="text-2xl" />
           </button>
         </div>
-        <ul className="grid grid-cols-3 gap-5 mt-14">
+        <ul className="grid grid-cols-3 gap-5">
           <li
             onClick={() => setShowModal(false)}
             className="border hover:border-[#0a192f] rounded-md duration-300"
