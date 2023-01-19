@@ -58,7 +58,7 @@ function Hero() {
             className="flex items-center mx-auto sm:mx-0 w-fit text-sm border border-[#64ffda] text-[#64ffda] rounded-[4px] hover:bg-[rgba(100,255,218,0.1)] py-2 px-4 duration-200 mt-6 group"
           >
             Contact Me{" "}
-            <BsTelephoneOutbound className="ml-2 text-green-500 group-hover:scale-90 duration-100" />
+            <BsTelephoneOutbound className="ml-2 text-[#64ffda] group-hover:scale-90 duration-100" />
           </a>
         </div>
       </div>

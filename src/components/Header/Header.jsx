@@ -3,7 +3,7 @@ import Modal from "../Modal/Modal";
 import { AiOutlineUnorderedList } from "react-icons/ai";
 import { TbDownload } from "react-icons/tb";
 // ------> Pdf
-import Resume from "../../pdf/Nodirbek Xoliqulov Resume.pdf";
+import Resume from "../../Assets/pdf/resume.pdf";
 
 function Header() {
   const [scrollDown, setScrollDown] = useState("");

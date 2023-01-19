@@ -5,9 +5,10 @@ import { TfiGallery } from "react-icons/tfi";
 import { AiOutlineHome } from "react-icons/ai";
 import { MdWorkOutline } from "react-icons/md";
 import { TbBrandTelegram } from "react-icons/tb";
+import { VscChromeClose } from "react-icons/vsc";
 
 // ------> Pdf
-import Resume from "../../pdf/Nodirbek Xoliqulov Resume.pdf";
+import Resume from "../../Assets/pdf/resume.pdf";
 
 function Modal({ showModal, setShowModal }) {
   // ------> Check_wrapper
@@ -24,15 +25,20 @@ function Modal({ showModal, setShowModal }) {
       id="wrapper"
       onClick={handleClick}
       className={`${
-        showModal ? "bg-black backdrop-blur-sm bg-opacity-25" : "-z-20"
-      }  inset-0 fixed duration-300 z-50 `}
+        showModal ? "bg-black backdrop-blur-sm bg-opacity-25 fixed w-full h-full" : ""
+      }`}
     >
       <div
-        className={`w-full ${
-          showModal ? "top-[65%]" : " -bottom-[1000px]"
-        } absolute h-full duration-300 bg-white rounded-t-xl pt-14 px-4 z-50`}
+        className={`${
+          showModal ? "top-[55%]" : " -bottom-[900px]"
+        } w-full absolute h-full duration-300 bg-white rounded-t-xl px-4 z-50`}
       >
-        <ul className="grid grid-cols-3 gap-5">
+        <div className="flex items-center justify-end">
+          <button className="">
+            <VscChromeClose />
+          </button>
+        </div>
+        <ul className="grid grid-cols-3 gap-5 mt-14">
           <li
             onClick={() => setShowModal(false)}
             className="border hover:border-[#0a192f] rounded-md duration-300"
