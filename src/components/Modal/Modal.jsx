@@ -111,8 +111,9 @@ function Modal({ showModal, setShowModal }) {
             </a>
           </li>
           <a
+            href={Resume}
+            download="Nodirbek's resume.pdf"
             className="flex items-center w-fit h-fit text-sm border border-[#0a192f] text-white hover:text-[#0a192f] rounded-[6px] bg-[#0a192f] hover:bg-white py-2 px-3 mt-[10px] duration-300"
-            href="/"
           >
             Resume
             <span className="inline-block ml-2">
