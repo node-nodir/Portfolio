@@ -7,11 +7,11 @@ import "./hero.css";
 
 function Hero() {
   return (
-    <section id="home" className="mt-12 sm:mt-[70px] py-14 sm:py-36">
+    <section id="home" className="mt-12 sm:mt-[70px] pt-14 sm:py-36">
       <div className="container">
         <div className="max-w-[600px]">
           <h2 className="flex items-end font-semibold text-4xl sm:text-5xl text-white tracking-normal">
-            Hi, I am
+            Hi, I'm
             <ul id="enthusiasm" className="list flex items-center m-0 p-0">
               <li id="N" className="item">
                 N
@@ -42,7 +42,7 @@ function Hero() {
               </li>
             </ul>
           </h2>
-          <strong className="dev flex items-center font-medium text-lg sm:text-2xl my-3 sm:my-2 text-gray-300 mr-2 -z-20">
+          <strong className="dev flex items-center font-medium text-base sm:text-2xl mt-3 mb-3 sm:mt-2 sm:mb-3 text-gray-300 mr-2 -z-20">
             Frontend developer{" "}
             <span className="inline-block ml-2">
               <IoIosCode />
@@ -57,8 +57,7 @@ function Hero() {
             href="tel:+998970130322"
             className="flex items-center mx-auto sm:mx-0 w-fit text-sm border border-[#64ffda] text-[#64ffda] rounded-[4px] hover:bg-[rgba(100,255,218,0.1)] py-2 px-4 duration-200 mt-6 group"
           >
-            Contact Me{" "}
-            <BsTelephoneOutbound className="ml-2 text-[#64ffda] group-hover:scale-90 duration-100" />
+            Contact Me <BsTelephoneOutbound className="ml-2 text-[#64ffda]" />
           </a>
         </div>
       </div>

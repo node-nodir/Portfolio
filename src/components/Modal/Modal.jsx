@@ -1,126 +1,24 @@
 import React from "react";
-import { BiUser } from "react-icons/bi";
-import { TbDownload } from "react-icons/tb";
-import { TfiGallery } from "react-icons/tfi";
-import { AiOutlineHome } from "react-icons/ai";
-import { MdWorkOutline } from "react-icons/md";
-import { TbBrandTelegram } from "react-icons/tb";
-import { SlClose } from "react-icons/sl";
 
-// ------> Pdf
-import Resume from "../../Assets/pdf/resume.pdf";
+function Modal({ isVisible, onClose, children }) {
+  if (!isVisible) return null;
 
-function Modal({ showModal, setShowModal }) {
-  // ------> Check_wrapper
-  const handleClick = (evt) => {
-    if (evt.target.id === "wrapper") {
-      setShowModal(false);
-    } else {
-      return;
-    }
+  const handleClick = (e) => {
+    if (e.target.id === "wrapper") onClose();
   };
 
   return (
     <div
       id="wrapper"
       onClick={handleClick}
-      className={`${
-        showModal ? "bg-black backdrop-blur-sm bg-opacity-25 fixed w-full h-full" : ""
-      }`}
+      className="fixed inset-0 bg-black bg-opacity-40 flex justify-center items-center z-50 duration-300"
     >
       <div
         className={`${
-          showModal ? "top-[60%]" : " -bottom-[900px]"
-        } w-full absolute h-full duration-300 bg-white rounded-t-xl px-4 z-50`}
+          isVisible ? "bottom-0" : "-bottom-[100%]"
+        } w-full absolute left-0 bg-white rounded-t-2xl px-5`}
       >
-        <div className="flex items-center justify-end pt-4 pb-6">
-          <button onClick={() => setShowModal(false)}>
-            <SlClose className="text-2xl" />
-          </button>
-        </div>
-        <ul className="grid grid-cols-3 gap-5">
-          <li
-            onClick={() => setShowModal(false)}
-            className="border hover:border-[#0a192f] rounded-md duration-300"
-          >
-            <a
-              className="flex flex-col items-center font-medium text-sm text-[#0a192f] py-2 border"
-              href="#home"
-            >
-              <span className="block text-lg  mb-1">
-                <AiOutlineHome />
-              </span>
-              Home
-            </a>
-          </li>
-          <li
-            onClick={() => setShowModal(false)}
-            className="border hover:border-[#0a192f] rounded-md duration-300"
-          >
-            <a
-              className="flex flex-col items-center font-medium text-sm text-[#0a192f] py-2"
-              href="#about"
-            >
-              <span className="block text-lg  mb-1">
-                <BiUser />
-              </span>
-              About
-            </a>
-          </li>
-          <li
-            onClick={() => setShowModal(false)}
-            className="border hover:border-[#0a192f] rounded-md duration-300"
-          >
-            <a
-              className="flex flex-col items-center font-medium text-sm text-[#0a192f] py-2"
-              href="/"
-            >
-              <span className="block text-lg  mb-1">
-                <MdWorkOutline />
-              </span>
-              Experience
-            </a>
-          </li>
-          <li
-            onClick={() => setShowModal(false)}
-            className="border hover:border-[#0a192f] rounded-md duration-300"
-          >
-            <a
-              href={Resume}
-              download="Nodirbek's resume.pdf"
-              className="flex flex-col items-center font-medium text-sm text-[#0a192f] py-2"
-            >
-              <span className="block text-lg  mb-1">
-                <TfiGallery />
-              </span>
-              Portfolio
-            </a>
-          </li>
-          <li
-            onClick={() => setShowModal(false)}
-            className="border hover:border-[#0a192f] rounded-md duration-300"
-          >
-            <a
-              className="flex flex-col items-center font-medium text-sm text-[#0a192f] py-2"
-              href="/"
-            >
-              <span className="block text-lg  mb-1">
-                <TbBrandTelegram />
-              </span>
-              Contactme
-            </a>
-          </li>
-          <a
-            href={Resume}
-            download="Nodirbek's resume.pdf"
-            className="flex items-center w-fit h-fit text-sm border border-[#0a192f] text-white hover:text-[#0a192f] rounded-[6px] bg-[#0a192f] hover:bg-white py-2 px-3 mt-[10px] duration-300"
-          >
-            Resume
-            <span className="inline-block ml-2">
-              <TbDownload />
-            </span>
-          </a>
-        </ul>
+        {children}
       </div>
     </div>
   );
