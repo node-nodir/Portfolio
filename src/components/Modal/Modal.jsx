@@ -11,7 +11,7 @@ function Modal({ isVisible, onClose, children }) {
     <div
       id="wrapper"
       onClick={handleClick}
-      className="fixed inset-0 bg-black bg-opacity-40 flex justify-center items-center z-50 duration-300"
+      className="fixed inset-0 bg-black bg-opacity-40 backdrop-blur-[2px] flex justify-center items-center z-50 duration-300"
     >
       <div
         className={`${

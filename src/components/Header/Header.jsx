@@ -37,7 +37,7 @@ function Header() {
 
   return (
     <header
-      className={`${scrollDown} bg-[#0a192f] fixed top-0 w-full h-fit duration-500 border-b border-b-[rgba(100,255,218,0.1)]`}
+      className={`${scrollDown} bg-[#0a192f] bg-opacity-30 fixed top-0 w-full h-fit duration-500 border-b border-b-[rgba(100,255,218,0.1)]`}
     >
       <div className="container">
         <nav className="flex items-center justify-between py-3 sm:py-4">
@@ -51,24 +51,33 @@ function Header() {
             <ul className="flex items-center space-x-6">
               <li className="nav_item text-sm px-2 py-1 group">
                 <a
-                  className="nav_link text-white group-hover:text-[#64ffda] duration-150"
                   href="#about"
+                  className="nav_link text-white group-hover:text-[#64ffda] duration-150"
                 >
                   About
                 </a>
               </li>
               <li className="nav_item text-sm px-2 py-1 group">
-                <a className="nav_link text-white group-hover:text-[#64ffda] duration-150" href="/">
+                <a
+                  href="#experience"
+                  className="nav_link text-white group-hover:text-[#64ffda] duration-150"
+                >
                   Experience
                 </a>
               </li>
               <li className="nav_item text-sm px-2 py-1 group">
-                <a className="nav_link text-white group-hover:text-[#64ffda] duration-150" href="/">
-                  Work
+                <a
+                  href="#portfolio"
+                  className="nav_link text-white group-hover:text-[#64ffda] duration-150"
+                >
+                  Portfolio
                 </a>
               </li>
               <li className="nav_item text-sm px-2 py-1 group">
-                <a className="nav_link text-white group-hover:text-[#64ffda] duration-150" href="/">
+                <a
+                  href="#contactme"
+                  className="nav_link text-white group-hover:text-[#64ffda] duration-150"
+                >
                   Contactme
                 </a>
               </li>
@@ -90,7 +99,7 @@ function Header() {
           >
             <span
               className={`${
-                showModal ? "-rotate-45 translate-y-[9.5px]" : ""
+                showModal ? "-rotate-45 translate-y-[8.8px]" : ""
               } inline-block w-full h-[2px] border border-white duration-300`}
             ></span>
             <span
@@ -100,7 +109,7 @@ function Header() {
             ></span>
             <span
               className={`${
-                showModal ? "rotate-45 -translate-y-[9.5px]" : ""
+                showModal ? "rotate-45 -translate-y-[8.8px]" : ""
               } inline-block w-full h-[2px] border border-white duration-300`}
             ></span>
           </button>
@@ -122,8 +131,8 @@ function Header() {
             className="border border-[#0a192f] hover:bg-[#0a192f] rounded-md w-full mx-auto duration-300"
           >
             <a
-              className="flex flex-col items-center justify-center font-medium text-sm text-[#0a192f] hover:text-white duration-200 py-2"
               href="#home"
+              className="flex flex-col items-center justify-center font-medium text-sm text-[#0a192f] hover:text-white duration-200 py-2"
             >
               <span className="block text-lg mb-[2px] mr-2">
                 <AiOutlineHome />
@@ -136,8 +145,8 @@ function Header() {
             className="border border-[#0a192f] hover:bg-[#0a192f] rounded-md w-full mx-auto duration-300"
           >
             <a
-              className="flex flex-col items-center justify-center font-medium text-sm text-[#0a192f] hover:text-white duration-200 py-2"
               href="#about"
+              className="flex flex-col items-center justify-center font-medium text-sm text-[#0a192f] hover:text-white duration-200 py-2"
             >
               <span className="block text-lg mb-[2px] mr-2">
                 <BiUser />
@@ -150,8 +159,8 @@ function Header() {
             className="border border-[#0a192f] hover:bg-[#0a192f] rounded-md w-full mx-auto duration-300"
           >
             <a
+              href="#experience"
               className="flex flex-col items-center justify-center font-medium text-sm text-[#0a192f] hover:text-white duration-200 py-2"
-              href="/"
             >
               <span className="block text-lg mb-[2px] mr-2">
                 <MdWorkOutline />
@@ -164,8 +173,8 @@ function Header() {
             className="border border-[#0a192f] hover:bg-[#0a192f] rounded-md w-full mx-auto duration-300"
           >
             <a
+              href="#portfolio"
               className="flex flex-col items-center justify-center font-medium text-sm text-[#0a192f] hover:text-white duration-200 py-2"
-              href="/"
             >
               <span className="block text-lg mb-[2px] mr-2">
                 <TfiGallery />
@@ -178,8 +187,8 @@ function Header() {
             className="border border-[#0a192f] hover:bg-[#0a192f] rounded-md w-full mx-auto duration-300"
           >
             <a
+              href="contactme"
               className="flex flex-col items-center justify-center font-medium text-sm text-[#0a192f] hover:text-white duration-200 py-2"
-              href="/"
             >
               <span className="block text-lg mb-[2px] mr-2">
                 <TbBrandTelegram />
@@ -190,7 +199,7 @@ function Header() {
           <a
             href={Resume}
             download="Nodirbek's resume.pdf"
-            className="flex flex-col-reverse items-center justify-center text-base w-full border border-[#0a192f] text-[#0a192f] hover:text-white rounded-[6px] bg-white hover:bg-[#0a192f] py-2 px-3 mx-auto duration-300"
+            className="flex flex-col-reverse items-center justify-center text-sm w-full border border-[#0a192f] text-[#0a192f] hover:text-white rounded-[6px] bg-white hover:bg-[#0a192f] py-2 px-3 mx-auto duration-300"
           >
             Resume
             <span className="inline-block">
