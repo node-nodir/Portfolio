@@ -37,7 +37,7 @@ function Header() {
 
   return (
     <header
-      className={`${scrollDown} bg-[#0a192f] bg-opacity-30 fixed top-0 w-full h-fit duration-500 border-b border-b-[rgba(100,255,218,0.1)]`}
+      className={`${scrollDown} bg-[#0a192f] fixed top-0 w-full h-fit duration-500 border-b border-b-[rgba(100,255,218,0.1)]`}
     >
       <div className="container">
         <nav className="flex items-center justify-between py-3 sm:py-4">
@@ -67,10 +67,10 @@ function Header() {
               </li>
               <li className="nav_item text-sm px-2 py-1 group">
                 <a
-                  href="#portfolio"
+                  href="#work"
                   className="nav_link text-white group-hover:text-[#64ffda] duration-150"
                 >
-                  Portfolio
+                  Work
                 </a>
               </li>
               <li className="nav_item text-sm px-2 py-1 group">
@@ -124,7 +124,10 @@ function Header() {
           setShowModal(false);
         }}
       >
-        <span className="absolute left-[40%] inline-block w-20 h-2 bg-[#0a192f] rounded-b-2xl"></span>
+        <span
+          onClick={() => setShowModal(false)}
+          className="absolute left-[40%] inline-block w-20 h-2 bg-[#0a192f] rounded-b-2xl"
+        ></span>
         <ul className="grid grid-cols-3 gap-y-8 gap-x-4 pt-14 pb-10">
           <li
             onClick={() => setShowModal(false)}
@@ -173,13 +176,13 @@ function Header() {
             className="border border-[#0a192f] hover:bg-[#0a192f] rounded-md w-full mx-auto duration-300"
           >
             <a
-              href="#portfolio"
+              href="#work"
               className="flex flex-col items-center justify-center font-medium text-sm text-[#0a192f] hover:text-white duration-200 py-2"
             >
               <span className="block text-lg mb-[2px] mr-2">
                 <TfiGallery />
               </span>
-              Portfolio
+              Work
             </a>
           </li>
           <li
