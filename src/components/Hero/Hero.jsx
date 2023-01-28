@@ -15,7 +15,7 @@ function Hero() {
               <li id="N" className="item">
                 N
               </li>
-              <li id="O" className="item">
+              <li id="O" className="item">  
                 o
               </li>
               <li id="D" className="item">
@@ -46,7 +46,7 @@ function Hero() {
           </strong>
           <p className="text-gray-300 text-base">
             Front End Developer with more than half a year of experience working with JavaScript,
-            React Js, Next Js to deliver exceptional customer experiences. Higly responsible and
+            React Js, Next Js to deliver exceptional customer experiences. Highly responsible and
             open-minded employee.
           </p>
           <a
