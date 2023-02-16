@@ -12,38 +12,40 @@ function Hero() {
     <section id="home" className="mt-12 sm:mt-[70px] pt-14 pb-8 sm:pt-36 sm:pb-24">
       <div className="container flex flex-wrap justify-center lg:flex lg:items-center lg:justify-between">
         <div className="max-w-[500px] text-center lg:text-start">
-          <h2 className="flex items-end font-semibold text-4xl sm:text-5xl text-white tracking-normal !text-center">
-            Hi, I'm
-            <ul id="enthusiasm" className="list flex items-center m-0 p-0">
-              <li id="N" className="item">
-                N
-              </li>
-              <li id="O" className="item">
-                o
-              </li>
-              <li id="D" className="item">
-                d
-              </li>
-              <li id="I" className="item">
-                i
-              </li>
-              <li id="R" className="item">
-                r
-              </li>
-              <li id="B" className="item">
-                b
-              </li>
-              <li id="E" className="item">
-                e
-              </li>
-              <li id="K" className="item">
-                k
-              </li>
-              <li id="DOT" className="item">
-                .
-              </li>
-            </ul>
-          </h2>
+          <div className="flex justify-center sm:justify-start">
+            <h2 className="flex items-end font-semibold text-4xl sm:text-5xl text-white tracking-normal ">
+              Hi, I'm
+              <ul id="enthusiasm" className="list flex items-center m-0 p-0">
+                <li id="N" className="item">
+                  N
+                </li>
+                <li id="O" className="item">
+                  o
+                </li>
+                <li id="D" className="item">
+                  d
+                </li>
+                <li id="I" className="item">
+                  i
+                </li>
+                <li id="R" className="item">
+                  r
+                </li>
+                <li id="B" className="item">
+                  b
+                </li>
+                <li id="E" className="item">
+                  e
+                </li>
+                <li id="K" className="item">
+                  k
+                </li>
+                <li id="DOT" className="item">
+                  .
+                </li>
+              </ul>
+            </h2>
+          </div>
           <strong className="inline-block dev font-normal text-base sm:text-2xl mt-3 mb-3 sm:mt-2 sm:mb-3 text-gray-300 -z-20">
             Frontend developer
           </strong>
