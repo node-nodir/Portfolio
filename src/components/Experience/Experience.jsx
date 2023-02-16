@@ -59,12 +59,12 @@ function Experience() {
         </h2>
         <div className="max-w-[800px] mx-auto mt-8">
           <div className="mt-8">
-            <div className="flex items-start">
-              <div className="flex flex-col items-start w-[25%]">
+            <div className="flex flex-col sm:flex-row items-start">
+              <div className="flex flex-col items-start w-full sm:w-[25%]">
                 <button
                   className={`${
                     active ? "text-[#64ffda] active bg-[#112240]" : ""
-                  } track relative text-sm text-white w-full text-start pl-4 py-2 duration-300 hover:bg-[#112240] z-10 rounded-r-lg`}
+                  } track relative text-sm text-white w-full text-start pl-4 py-4 duration-300 hover:bg-[#112240] z-0 rounded-r-md`}
                   onClick={handleClick}
                 >
                   Unical Solutions
@@ -72,7 +72,7 @@ function Experience() {
                 <button
                   className={`${
                     active1 ? "text-[#64ffda] active bg-[#112240]" : ""
-                  } track relative text-sm text-white w-full text-start pl-4 py-2 duration-300 hover:bg-[#112240] z-10 rounded-r-lg`}
+                  } track relative text-sm text-white w-full text-start pl-4 py-4 duration-300 hover:bg-[#112240] z-0 rounded-r-md`}
                   onClick={handleClick1}
                 >
                   Support-IT-Solutions
@@ -80,13 +80,13 @@ function Experience() {
                 <button
                   className={`${
                     active2 ? "text-[#64ffda] active bg-[#112240]" : ""
-                  } track relative text-sm text-white w-full text-start pl-4 py-2 duration-300 hover:bg-[#112240] z-10 rounded-r-lg`}
+                  } track relative text-sm text-white w-full text-start pl-4 py-4 duration-300 hover:bg-[#112240] z-0 rounded-r-md`}
                   onClick={handleClick2}
                 >
                   RoboticsLab
                 </button>
               </div>
-              <div className="w-[75%] ml-5">
+              <div className="w-[100%] sm:w-[75%] mt-10 sm:ml-5">
                 {active ? (
                   <>
                     <h2 className="text-xl text-[#64ffda] font-medium">
@@ -94,7 +94,7 @@ function Experience() {
                       Solutions
                     </h2>
                     <strong className="font-serif inline-block font-normal text-lg text-[#a8b2d1] tracking-wide">
-                      Yanuary - Present
+                      Yanuary 2023 - Present
                     </strong>
                     <ul className="space-y-3 mt-6">
                       <li className="flex items-start">
