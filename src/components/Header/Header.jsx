@@ -9,10 +9,17 @@ import Modal from "../Modal/Modal";
 
 // ------> Pdf
 import Resume from "../../Assets/pdf/resume.pdf";
+import { useContext } from "react";
+import { Context } from "../../Context/ModalContext";
 
 function Header() {
   const [scrollDown, setScrollDown] = useState("");
   const [showModal, setShowModal] = useState(false);
+
+  // ------> Context
+  const ctx = useContext(Context);
+  // eslint-disable-next-line no-unused-vars
+  const { show, setShow } = ctx;
 
   let lastScrollY = window.scrollY;
   window.addEventListener(
@@ -95,7 +102,10 @@ function Header() {
           </div>
           <button
             className="flex flex-col justify-between w-7 h-5 sm:hidden"
-            onClick={() => setShowModal(true)}
+            onClick={() => {
+              setShowModal(true);
+              setShow(true);
+            }}
           >
             <span
               className={`${
@@ -122,15 +132,22 @@ function Header() {
         isVisible={showModal}
         onClose={() => {
           setShowModal(false);
+          setShow(false);
         }}
       >
         <span
-          onClick={() => setShowModal(false)}
+          onClick={() => {
+            setShowModal(false);
+            setShow(false);
+          }}
           className="absolute left-[40%] inline-block w-20 h-2 bg-[#0a192f] rounded-b-2xl"
         ></span>
         <ul className="grid grid-cols-3 gap-y-8 gap-x-4 pt-14 pb-10">
           <li
-            onClick={() => setShowModal(false)}
+            onClick={() => {
+              setShowModal(false);
+              setShow(false);
+            }}
             className="border border-[#0a192f] hover:bg-[#0a192f] rounded-md w-full mx-auto duration-300"
           >
             <a
@@ -144,7 +161,10 @@ function Header() {
             </a>
           </li>
           <li
-            onClick={() => setShowModal(false)}
+            onClick={() => {
+              setShowModal(false);
+              setShow(false);
+            }}
             className="border border-[#0a192f] hover:bg-[#0a192f] rounded-md w-full mx-auto duration-300"
           >
             <a
@@ -158,7 +178,10 @@ function Header() {
             </a>
           </li>
           <li
-            onClick={() => setShowModal(false)}
+            onClick={() => {
+              setShowModal(false);
+              setShow(false);
+            }}
             className="border border-[#0a192f] hover:bg-[#0a192f] rounded-md w-full mx-auto duration-300"
           >
             <a
@@ -172,7 +195,10 @@ function Header() {
             </a>
           </li>
           <li
-            onClick={() => setShowModal(false)}
+            onClick={() => {
+              setShowModal(false);
+              setShow(false);
+            }}
             className="border border-[#0a192f] hover:bg-[#0a192f] rounded-md w-full mx-auto duration-300"
           >
             <a
@@ -186,7 +212,10 @@ function Header() {
             </a>
           </li>
           <li
-            onClick={() => setShowModal(false)}
+            onClick={() => {
+              setShowModal(false);
+              setShow(false);
+            }}
             className="border border-[#0a192f] hover:bg-[#0a192f] rounded-md w-full mx-auto duration-300"
           >
             <a

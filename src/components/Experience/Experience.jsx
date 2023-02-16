@@ -1,8 +1,10 @@
 import axios from "axios";
 import React from "react";
+import { useContext } from "react";
 import { useState } from "react";
 import { BiCaretRight } from "react-icons/bi";
 import { MdWorkOutline } from "react-icons/md";
+import { Context } from "../../Context/ModalContext";
 
 // ------> Css
 import "./experience.css";
@@ -11,6 +13,10 @@ function Experience() {
   const [active, setActive] = useState(true);
   const [active1, setActive1] = useState(false);
   const [active2, setActive2] = useState(false);
+
+  // ------> Context
+  const ctx = useContext(Context);
+  const { show } = ctx;
 
   const handleClick = () => {
     setActive(true);
@@ -62,39 +68,39 @@ function Experience() {
             <div className="flex flex-col sm:flex-row items-start">
               <div className="flex flex-col items-start w-full sm:w-[25%]">
                 <button
-                  className={`${
-                    active ? "text-[#64ffda] active bg-[#112240]" : ""
-                  } track relative text-sm text-white w-full text-start pl-4 py-4 duration-300 hover:bg-[#112240] z-0 rounded-r-md`}
+                  className={`${active ? "text-[#64ffda] active bg-[#112240]" : ""} ${
+                    show ? "!-z-10" : "z-0"
+                  } track relative text-sm text-gray-300 w-full text-start pl-4 py-3 duration-300 hover:bg-[#112240] rounded-r-md`}
                   onClick={handleClick}
                 >
                   Unical Solutions
                 </button>
                 <button
-                  className={`${
-                    active1 ? "text-[#64ffda] active bg-[#112240]" : ""
-                  } track relative text-sm text-white w-full text-start pl-4 py-4 duration-300 hover:bg-[#112240] z-0 rounded-r-md`}
+                  className={`${active1 ? "text-[#64ffda] active bg-[#112240]" : ""} ${
+                    show ? "!-z-10" : "z-0"
+                  } track relative text-sm text-gray-300 w-full text-start pl-4 py-3 duration-300 hover:bg-[#112240] rounded-r-md`}
                   onClick={handleClick1}
                 >
                   Support-IT-Solutions
                 </button>
                 <button
-                  className={`${
-                    active2 ? "text-[#64ffda] active bg-[#112240]" : ""
-                  } track relative text-sm text-white w-full text-start pl-4 py-4 duration-300 hover:bg-[#112240] z-0 rounded-r-md`}
+                  className={`${active2 ? "text-[#64ffda] active bg-[#112240]" : ""} ${
+                    show ? "!-z-10" : "z-0"
+                  } track relative text-sm text-gray-300 w-full text-start pl-4 py-3 duration-300 hover:bg-[#112240] rounded-r-md`}
                   onClick={handleClick2}
                 >
                   RoboticsLab
                 </button>
               </div>
-              <div className="w-[100%] sm:w-[75%] mt-10 sm:ml-5">
+              <div className="w-[100%] sm:w-[75%] sm:ml-5">
                 {active ? (
                   <>
                     <h2 className="text-xl text-[#64ffda] font-medium">
                       <span className="inline-block text-white">Front End Developer</span> @ Unical
                       Solutions
                     </h2>
-                    <strong className="font-serif inline-block font-normal text-lg text-[#a8b2d1] tracking-wide">
-                      Yanuary 2023 - Present
+                    <strong className="font-serif inline-block font-light text-sm text-[#CFB53B] tracking-wide">
+                      Yanuary - February 2023
                     </strong>
                     <ul className="space-y-3 mt-6">
                       <li className="flex items-start">
@@ -127,7 +133,7 @@ function Experience() {
                       <span className="inline-block text-white">Front End Developer</span> @ Support
                       - IT Solutions
                     </h2>
-                    <strong className="font-serif inline-block font-normal text-lg text-[#a8b2d1] tracking-wide">
+                    <strong className="font-serif inline-block font-light text-sm text-[#CFB53B] tracking-wide">
                       August 2022 - Yanuary 2023
                     </strong>
                     <ul className="space-y-3 mt-6">
@@ -163,7 +169,7 @@ function Experience() {
                       <span className="inline-block text-white">Front End Mentor</span> @
                       RoboticsLab
                     </h2>
-                    <strong className="font-serif inline-block font-normal text-lg text-[#a8b2d1] tracking-wide">
+                    <strong className="font-serif inline-block font-light text-sm text-[#CFB53B] tracking-wide">
                       July - August 2022
                     </strong>
                     <ul className="space-y-3 mt-6">

@@ -3,7 +3,7 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     fontFamily: {
-      serif: ["Buenard", "sans-serif"],
+      serif: ["Raleway", "sans-serif"],
     },
     extend: {},
   },
