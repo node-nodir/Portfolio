@@ -92,7 +92,7 @@ function Experience() {
                   RoboticsLab
                 </button>
               </div>
-              <div className="w-[100%] sm:w-[75%] sm:ml-5">
+              <div className="w-[100%] sm:w-[75%] sm:ml-10 mt-8">
                 {active ? (
                   <>
                     <h2 className="text-xl text-[#64ffda] font-medium">
