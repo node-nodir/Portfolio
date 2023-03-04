@@ -49,7 +49,7 @@ function Header() {
       <div className="container">
         <nav className="flex items-center justify-between py-3 sm:py-4">
           <a
-            className="font-serif flex items-center justify-center font-semibold text-base text-[#64ffda] border-2 border-dashed border-[#64ffda] hover:bg-[rgba(100,255,218,0.1)] rounded-full w-8 sm:w-10 h-8 sm:h-10 duration-200"
+            className="font-sans flex items-center justify-center font-semibold text-base text-[#64ffda] border-2 border-dashed border-[#64ffda] hover:bg-[rgba(100,255,218,0.1)] rounded-full w-8 sm:w-10 h-8 sm:h-10 duration-200"
             href="/"
           >
             N
@@ -77,7 +77,7 @@ function Header() {
                   href="#work"
                   className="nav_link text-white group-hover:text-[#64ffda] duration-150"
                 >
-                  Work
+                  Portfolio
                 </a>
               </li>
               <li className="nav_item text-sm px-2 py-1 group">
@@ -154,7 +154,7 @@ function Header() {
               href="#home"
               className="flex flex-col items-center justify-center font-medium text-sm text-[#0a192f] hover:text-white duration-200 py-2"
             >
-              <span className="block text-lg mb-[2px] mr-2">
+              <span className="block text-lg mb-[2px] sm:mr-2">
                 <AiOutlineHome />
               </span>
               Home
@@ -171,7 +171,7 @@ function Header() {
               href="#about"
               className="flex flex-col items-center justify-center font-medium text-sm text-[#0a192f] hover:text-white duration-200 py-2"
             >
-              <span className="block text-lg mb-[2px] mr-2">
+              <span className="block text-lg mb-[2px] sm:mr-2">
                 <BiUser />
               </span>
               About
@@ -188,7 +188,7 @@ function Header() {
               href="#experience"
               className="flex flex-col items-center justify-center font-medium text-sm text-[#0a192f] hover:text-white duration-200 py-2"
             >
-              <span className="block text-lg mb-[2px] mr-2">
+              <span className="block text-lg mb-[2px] sm:mr-2">
                 <MdWorkOutline />
               </span>
               Experience
@@ -205,10 +205,10 @@ function Header() {
               href="#work"
               className="flex flex-col items-center justify-center font-medium text-sm text-[#0a192f] hover:text-white duration-200 py-2"
             >
-              <span className="block text-lg mb-[2px] mr-2">
+              <span className="block text-lg mb-[2px] sm:mr-2">
                 <TfiGallery />
               </span>
-              Work
+              Portfolio
             </a>
           </li>
           <li
@@ -222,7 +222,7 @@ function Header() {
               href="contactme"
               className="flex flex-col items-center justify-center font-medium text-sm text-[#0a192f] hover:text-white duration-200 py-2"
             >
-              <span className="block text-lg mb-[2px] mr-2">
+              <span className="block text-lg mb-[2px] sm:mr-2">
                 <TbBrandTelegram />
               </span>
               Contactme

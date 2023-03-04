@@ -63,14 +63,14 @@ function Experience() {
           </span>
           <span className="inline-block w-14 sm:w-40 h-[1px] bg-[rgba(100,255,218,0.1)] rounded-full ml-5"></span>
         </h2>
-        <div className="max-w-[800px] mx-auto mt-8">
-          <div className="mt-8">
+        <div className="max-w-[800px] mx-auto">
+          <div className="mt-8 sm:mt-12">
             <div className="flex flex-col sm:flex-row items-start">
-              <div className="flex flex-col items-start w-full sm:w-[25%]">
+              <div className="w-[70%] sm:w-[25%]">
                 <button
                   className={`${active ? "text-[#64ffda] active bg-[#112240]" : ""} ${
                     show ? "!-z-10" : "z-0"
-                  } track relative text-sm text-gray-300 w-full text-start pl-4 py-3 duration-300 hover:bg-[#112240] rounded-r-md`}
+                  } track relative text-sm text-gray-300 w-full text-start pl-4 py-[10px] duration-300 hover:bg-[#112240] rounded-r-md`}
                   onClick={handleClick}
                 >
                   Unical Solutions
@@ -78,21 +78,21 @@ function Experience() {
                 <button
                   className={`${active1 ? "text-[#64ffda] active bg-[#112240]" : ""} ${
                     show ? "!-z-10" : "z-0"
-                  } track relative text-sm text-gray-300 w-full text-start pl-4 py-3 duration-300 hover:bg-[#112240] rounded-r-md`}
+                  } track relative text-sm text-gray-300 w-full text-start pl-4 py-[10px] duration-300 hover:bg-[#112240] rounded-r-md`}
                   onClick={handleClick1}
                 >
-                  Support-IT-Solutions
+                  Support - IT Solutions
                 </button>
                 <button
                   className={`${active2 ? "text-[#64ffda] active bg-[#112240]" : ""} ${
                     show ? "!-z-10" : "z-0"
-                  } track relative text-sm text-gray-300 w-full text-start pl-4 py-3 duration-300 hover:bg-[#112240] rounded-r-md`}
+                  } track relative text-sm text-gray-300 w-full text-start pl-4 py-[10px] duration-300 hover:bg-[#112240] rounded-r-md`}
                   onClick={handleClick2}
                 >
                   RoboticsLab
                 </button>
               </div>
-              <div className="w-[100%] sm:w-[75%] sm:ml-10 mt-8">
+              <div className="w-[100%] sm:w-[75%] sm:ml-10 mt-8 sm:mt-0">
                 {active ? (
                   <>
                     <h2 className="text-xl text-[#64ffda] font-medium">
