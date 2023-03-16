@@ -22,17 +22,13 @@ function Header() {
   const { show, setShow } = ctx;
 
   let lastScrollY = window.scrollY;
-  window.addEventListener(
-    "scroll",
-    () => {
-      if (lastScrollY < window.scrollY) {
-        setScrollDown("nav-hidden");
-      } else {
-        setScrollDown("");
-      }
-    },
-    []
-  );
+  window.addEventListener("scroll", () => {
+    if (lastScrollY < window.scrollY) {
+      setScrollDown("nav-hidden");
+    } else {
+      setScrollDown("");
+    }
+  });
 
   useEffect(() => {
     if (showModal) {
